@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+*
+ {
+margin: 0;
+ padding: 0;
+box-sizing: border-box;
+
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background:#222839;
+font-family: 'Roboto', sans-serif;
+}
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: #222839;
+    -webkit-text-stroke: 0.5vw #383d52;
+    text-transform: uppercase;
+
+}
+h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(242, 156, 250);
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid rgb(242, 156, 250) ;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+    
+
+} 
+@keyframes animate
+{ 
+    0%,10%,100%
+    {
+        width: 0;  
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #f2eeee;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    cursor: pointer;
+  }
+  
+  .shadow__btn {
+    background:rgb(219, 158, 209);
+    box-shadow: 0 0 25px rgb(219, 158, 209);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(219, 158, 209),
+                0 0 25px rgb(219, 158, 209),
+                0 0 50px rgb(219, 158, 209),
+                0 0 100px rgb(219, 158, 209);
+  }
+  button.shadow__btn {
+    display: block;
+    margin-top: 500px; /* Adjust the margin to control the space between the text and the button */
+    
+}
+/* Đối với các phần tử ngoại trừ nút */
+body > :not(.shadow__btn) {
+    margin-left: 100px; /* Điều chỉnh khoảng cách sang trái tùy ý */
+    margin-right: 100px;
+}
+
+/* Đối với nút */
+.shadow__btn {
+    margin-left: -100px; /* Điều chỉnh khoảng cách sang trái cho nút */
+}
+
+

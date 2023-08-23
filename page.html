@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./Pic/quang.jpg" />
+    <title>Code nhà làm</title>
+
+   
+    <link rel="stylesheet" href="./page.css">
+</head>
+<body>
+    <h2  data-text="Audrey"> Audrey</h2> 
+       <button class="shadow__btn" onclick="toggleAudio()">Nhấn vào đi cậu</button>
+<audio id="myAudio">
+  <source src="./Pic/nhac.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+var isPlaying1 = false;
+
+function toggleAudio() {
+  var audio = document.getElementById("myAudio");
+  if (isPlaying1) {
+    audio.pause();
+    isPlaying1 = false;
+  } else {
+    audio.play();
+    isPlaying1 = true;
+  }
+}
+</script>
+
+    
+
+    
+
+    
+</body>
+</html>
